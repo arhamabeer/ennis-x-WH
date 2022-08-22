@@ -1,11 +1,49 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-@import url('https://rsms.me/inter/inter.css');
-body,html { font-family: 'Inter', sans-serif; }
+@import url("https://rsms.me/inter/inter.css");
+body,
+html {
+  font-family: "Inter", sans-serif;
+}
 @supports (font-variation-settings: normal) {
-  body, html { font-family: 'Inter var', sans-serif; }
+  body,
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
+.typo_header_1st {
+  font-size: 23px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .typo_header_1st {
+    font-size: 18px !important;
+  }
+  .img_header_1st {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .Cont_header_1st {
+    height: 68px !important;
+  }
+  .appB_header_1st {
+    height: 68px !important;
+  }
+  .tool_header_1st {
+    height: 68px !important;
+  }
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+} */
 /* body, html {
   font-family: 'Inter';
 } */

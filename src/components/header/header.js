@@ -17,7 +17,7 @@ import Logo from "../../assets/Logo.png";
 const pages = [
   "First Link",
   "Second Link",
-  "Third     Link",
+  "Third Link",
   "Fourth Link",
   "Fifth Link",
   "Button",
@@ -44,10 +44,23 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "white", boxShadow: 0 }} style={{position: 'fixed'}} >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <img src={Logo} />
+    <AppBar
+      position="static"
+      sx={{ bgcolor: "white", boxShadow: 0, maxWidth: "100%", height: 88 }}
+      style={{ position: "fixed" }}
+      className="appB_header_1st"
+    >
+      <Container
+        maxWidth="auto"
+        style={{ height: 88 }}
+        className="Cont_header_1st"
+      >
+        <Toolbar
+          disableGutters
+          style={{ height: 88 }}
+          className="tool_header_1st"
+        >
+          <img src={Logo} width={48} height={48} className="img_header_1st" />
           <Typography
             variant="h6"
             noWrap
@@ -61,7 +74,10 @@ const ResponsiveAppBar = () => {
               color: "black",
               marginLeft: 1,
               textDecoration: "none",
+              fontFamily: "Inter",
+              fontSize: 23,
             }}
+            className="typo_header_1st"
           >
             Sections
           </Typography>
@@ -71,7 +87,7 @@ const ResponsiveAppBar = () => {
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
               color: "black",
-              justifyContent: 'flex-end'
+              justifyContent: "flex-end",
             }}
           >
             <IconButton
@@ -111,6 +127,7 @@ const ResponsiveAppBar = () => {
                   <Typography
                     sx={{ color: "black", fontSize: 15, fontWeight: 600 }}
                     textAlign="center"
+                    autoCapitalize="none"
                   >
                     {page}
                   </Typography>
@@ -133,6 +150,7 @@ const ResponsiveAppBar = () => {
 
               color: "inherit",
               textDecoration: "none",
+              fontFamily: "Inter",
             }}
           >
             Sections
@@ -152,18 +170,32 @@ const ResponsiveAppBar = () => {
                 sx={{ my: 2, color: "black", display: "block" }}
                 style={
                   i === 4
-                    ? { color: "#FF8364", fontSize: 15, fontWeight: 600 }
+                    ? {
+                        color: "#FF8364",
+                        fontSize: 15,
+                        fontWeight: 600,
+                        textTransform: "none",
+                        fontFamily: "Inter",
+                      }
                     : i === 5
                     ? {
                         backgroundColor: "#FF8364",
                         color: "#fff",
                         fontSize: 15,
                         fontWeight: 600,
+                        textTransform: "none",
+                        fontFamily: "Inter",
+                        borderRadius: 6,
                       }
-                    : { fontSize: 15, fontWeight: 600 }
+                    : {
+                        fontSize: 15,
+                        fontWeight: 600,
+                        textTransform: "none",
+                        fontFamily: "Inter",
+                      }
                 }
               >
-                {page}
+                {page} &nbsp; {i === 5 && "▢"}
               </Button>
             ))}
           </Box>
@@ -189,7 +221,9 @@ const ResponsiveAppBar = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography autoCapitalize="none" textAlign="center">
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

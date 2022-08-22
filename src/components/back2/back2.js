@@ -5,7 +5,7 @@ export default function Back2() {
   return (
     <div className="back2_main_div">
       <div className="back2_main_div_inner1">
-        <h6>Short heading</h6>
+        <h6>SHORT HEADING</h6>
         <h2>Short heading</h2>
       </div>
       <div className="back2_main_div_inner2">
