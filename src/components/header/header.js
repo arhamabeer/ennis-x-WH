@@ -86,7 +86,7 @@ const ResponsiveAppBar = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
-              color: "black",
+              color: "#969696",
               justifyContent: "flex-end",
             }}
           >
@@ -176,6 +176,7 @@ const ResponsiveAppBar = () => {
                         fontWeight: 600,
                         textTransform: "none",
                         fontFamily: "Inter",
+                        padding: "6px 12px",
                       }
                     : i === 5
                     ? {
@@ -186,12 +187,14 @@ const ResponsiveAppBar = () => {
                         textTransform: "none",
                         fontFamily: "Inter",
                         borderRadius: 6,
+                        padding: "6px 12px",
                       }
                     : {
                         fontSize: 15,
                         fontWeight: 600,
                         textTransform: "none",
                         fontFamily: "Inter",
+                        padding: "6px 12px",
                       }
                 }
               >
