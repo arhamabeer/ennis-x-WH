@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+@import url('https://rsms.me/inter/inter.css');
+body,html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  body, html { font-family: 'Inter var', sans-serif; }
+}
+/* body, html {
+  font-family: 'Inter';
+} */
